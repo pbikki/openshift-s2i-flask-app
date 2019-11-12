@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Running assemble script from builder image....."
+${STI_SCRIPTS_PATH}/assemble
+rc=$?
+
+if [ $rc -eq 0 ]; then
+    echo "Assembling is successful"
+else
+    echo "failed assembling"
+fi
+
+#chmod 755 /opt/app-root/src/run.sh

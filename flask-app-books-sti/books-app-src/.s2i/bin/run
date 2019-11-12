@@ -1,0 +1,12 @@
+#!/bin/sh
+
+###### RUN MIGRATIONS #######
+#Run the migrations to initialize Alembic
+python manage.py db init
+#Migrate using the created files, run
+python manage.py db migrate
+#apply the migrations to the database
+python manage.py db upgrade
+#####################################
+
+python -u manage.py runserver --host 0.0.0.0
