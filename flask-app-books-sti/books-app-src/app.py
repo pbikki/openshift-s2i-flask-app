@@ -18,7 +18,7 @@ from models import Book
 
 @app.route("/")
 def hello():
-    return jsonify(message="Hello World - git webook test!")
+    return jsonify(message="Hello World - trigger deployment!")
 
 
 def _add_book(**kwargs):
