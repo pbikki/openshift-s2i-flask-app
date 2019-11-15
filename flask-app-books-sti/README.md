@@ -6,7 +6,7 @@ Source-to-Image (S2I) is a toolkit and workflow for building reproducible contai
 Download the [latest release](https://github.com/openshift/source-to-image/releases/tag/v1.2.0)
 
 ```
-$ s2i build https://github.com/poojitha-bikki/openshift-s2i.git  centos/python-36-centos7 s2i-books-flask-app:v0 --context-dir=/flask-app-books-sti/books-app-src --ref=master
+$ s2i build https://github.com/poojitha-bikki/openshift-s2i-flask-app.git  centos/python-36-centos7 s2i-books-flask-app:v0 --context-dir=/flask-app-books-sti/books-app-src --ref=master
 ```
 The flags used in the above command:
 ```

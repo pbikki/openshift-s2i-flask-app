@@ -18,7 +18,7 @@ from models import Book
 
 @app.route("/")
 def hello():
-    return jsonify(message="Hello World - Lalala...")
+    return jsonify(message="Hello World - test...Lalala...")
 
 
 def _add_book(**kwargs):
