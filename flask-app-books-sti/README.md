@@ -17,4 +17,19 @@ The flags used in the above command:
 https://docs.okd.io/latest/dev_guide/builds/build_strategies.html#source-to-image-strategy-options
 
 
+oc create -f buildconfig.yaml
+```
+oc new-app https://github.com/poojitha-bikki/openshift-s2i-flask-app.git --context-dir=/flask-app-books-sti/books-app-src
 
+--> Creating resources ...
+    imagestream.image.openshift.io "openshift-s2i-flask-app" created
+    buildconfig.build.openshift.io "openshift-s2i-flask-app" created
+    deploymentconfig.apps.openshift.io "openshift-s2i-flask-app" created
+    service "openshift-s2i-flask-app" created
+
+```
+oc start-build flask-app-books-s2i-bc --follow
+
+oc create imagestream flask-app-books-s2i-is
+
+oc logs -f bc/flask-app-books-s2i-bc 
